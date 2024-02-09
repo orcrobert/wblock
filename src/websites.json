@@ -1,37 +1,37 @@
 [
     {
         "name": "Facebook",
-        "url": "https://www.facebook.com/",
+        "url": "www.facebook.com",
         "overridable": false
     },
     {
         "name": "discord",
-        "url": "https://www.discord.com/",
+        "url": "www.discord.com",
         "overridable": false
     },
     {
         "name": "Twitter",
-        "url": "https://www.twitter.com/",
+        "url": "www.twitter.com",
         "overridable": false
     },
     {
         "name": "Instagram",
-        "url": "https://www.instagram.com/",
+        "url": "www.instagram.com",
         "overridable": false
     },
     {
         "name": "Twitch",
-        "url": "https://www.twitch.tv/",
+        "url": "www.twitch.tv",
         "overridable": false
     },
     {
         "name": "Reddit",
-        "url": "https://www.reddit.com/",
+        "url": "www.reddit.com",
         "overridable": false
     },
     {
         "name": "Youtube",
-        "url": "youtube.com",
+        "url": "www.youtube.com",
         "overridable": false
     }
 ]
