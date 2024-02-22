@@ -1,2 +1,2 @@
 # wblock
-Script that helps you stay productive by blocking distracting websites!
+Command line script that helps you stay productive by blocking distracting websites.

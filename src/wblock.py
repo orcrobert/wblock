@@ -19,10 +19,6 @@ def remove(keyword: str):
 def run():
     run_block()
     
-@app.command("stop")
-def stop():
-    clean_up()
-
 def add_to_file(name, url, overridable):
     new_entry = {'name': name, 'url': url, 'overridable': overridable}
     
@@ -66,25 +62,25 @@ def get_websites():
 
 def run_block():
     hosts_path = "/etc/hosts"
-    input("Running...\nTo stop, use the 'the stop command'")
-    print(get_websites())
+    print("Running...\n")
     
-    while True:
-        with open(hosts_path, "r+") as file:
-            content = file.read()
-            for website in get_websites():
-                if website not in content:
-                    file.write("127.0.0.1" + " " + website + "\n")
-                    
-def clean_up():
-    hosts_path = "/etc/hosts"
-    with open(hosts_path, 'r+') as file: 
+    try:
+        while True:
+            with open(hosts_path, "r+") as file:
+                content = file.read()
+                for website in get_websites():
+                    if website not in content:
+                        file.write("127.0.0.1" + " " + website + "\n")
+    finally:
+        with open(hosts_path, 'r+') as file: 
             content = file.readlines() 
             file.seek(0) 
             for line in content: 
                 if not any(website in line for website in get_websites()): 
                     file.write(line) 
             file.truncate()
+            
+        print("\nStopped. Websites have been unblocked.")
 
 if __name__ == "__main__":
     app()
