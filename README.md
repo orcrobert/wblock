@@ -20,7 +20,7 @@ A simple and effective Python-based website blocker that helps you stay focused 
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/orcblock.git
+git clone https://github.com/orcrobert/orcblock.git
 cd orcblock
 ```
 
