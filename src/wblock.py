@@ -71,6 +71,7 @@ def run_block():
                 for website in get_websites():
                     if website not in content:
                         file.write("127.0.0.1" + " " + website + "\n")
+                        print("Blocking " + website + "...")
     finally:
         with open(hosts_path, 'r+') as file: 
             content = file.readlines() 
